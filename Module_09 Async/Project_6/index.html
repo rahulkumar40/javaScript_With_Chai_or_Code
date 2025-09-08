@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      background-color: rgb(14, 12, 12);
+      color: aqua;
+
+    }
+    body{
+      height: 100vh;
+      width: 100vw;
+    }
+    button{
+      height: 60px;
+      width:120px;
+      border: 2px solid rgb(195, 136, 136);
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Chai Aur Code</h1>
+
+  <button id="start">start</button>
+  <button id="stop">Stop</button>
+  <script>
+    const body = document.querySelector('body');
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+
+
+    const color = ()=>{
+      let col1 = Math.round(Math.random()*255 + 1);
+      let col2 = Math.round(Math.random()*255 + 1);
+      let col3 = Math.round(Math.random()*255 + 1);
+      body.style.backgroundColor = `rgb(${col1}, ${col2}, ${col3})`};
+    // my do 
+    // body.addEventListener('click', ()=>{
+    //     color();
+    // })
+
+    let intervalId
+// ----> ----> 
+    const startChangingColor = function(){
+      // intervalId = setInterval(changeColor, 1000);
+
+      if(!intervalId){
+      intervalId = setInterval(changeColor, 100);
+      }
+
+      function changeColor() {
+        color();
+      }
+    }
+    // main method 
+    start.addEventListener('click', startChangingColor);
+
+
+    const stopChangingColor = function(){
+      clearInterval(intervalId);
+      intervalId = null;
+      alert("Stop Changing ! ")
+    }
+    stop.addEventListener('click', stopChangingColor);
+  </script>
+</body>
+</html>

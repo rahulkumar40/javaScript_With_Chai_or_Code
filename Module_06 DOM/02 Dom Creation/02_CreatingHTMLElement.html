@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chai Aur Code</title>
+</head>
+<body style="background-color: black; color: white;">
+  <script>
+    // creation of node into blank HTML by javaScript 
+    // -->  process to create a div 
+    const div = document.createElement('div'); // <div> </div>
+    console.log(div)                //show --> <div> </div>
+    div.className = "main";         // <div class="main"> </div>
+    div.id = "myId";                 // // <div class="main" id="myId"> </div>
+    // div.id will be override 
+    div.id = Math.round(Math.random() * 10 + 1); //// <div class="main" id="3"> </div>
+    div.setAttribute('title', 'generate title');
+    div.style.backgroundColor = 'red';
+    div.style.padding = "13px" 
+
+    // all things will created but inside the memory show dont't show on the HTML documnet .
+    // --->
+    // now add inner code to the div 
+
+    // -----> Method 01 To add content into element 
+    // div.innerText = "Hitesh Sir " 
+    /*
+    <div class="main" id="9" title="generate title" style="background-color: red; padding: 13px;">Hitesh sir</div>
+    */
+    // -----> Method 02 To add content into element 
+    const addText = document.createTextNode("Chai aur Code")
+    div.append(addText)
+    /*
+    <div class="main" id="9" title="generate title" style="background-color: red; padding: 13px;">Chai aur Code</div>
+    */
+    document.body.appendChild(div);   
+
+
+    // let div ;
+    // const createDiv = (message)=>{
+    //   div = document.createElement('div');
+    //   div.style.backgroundColor = 'blue';
+    //   div.style.padding = "10px" 
+    //   div.style.margin = "5px"
+    //   div.setAttribute('title', 'function-msg');
+    //   const addText = document.createTextNode(`${message}`);
+    //   div.appendChild(addText)
+    //   // document.body.append(`${message}`)
+    //   document.body.appendChild(div)
+    // }
+    // createDiv("hi i am Rahul kumar sah ");
+    createDiv("Hitesh sir");
+
+    
+
+    // const h1 = document.createElement('h1');
+
+    // console.log(h1)
+
+    // div.setAttribute("title", "generated title"); // most prefere.
+    // div.style.backgroundColor = "green";
+    // div.style.padding = "23px";
+    // // div.innerText = "Chai Aur Code"; 
+
+    // const addText = document.createTextNode("Chai aur code");
+
+    //   div.appendChild(addText)
+    
+    // document.body.appendChild(div)
+  </script>
+</body>
+</html>

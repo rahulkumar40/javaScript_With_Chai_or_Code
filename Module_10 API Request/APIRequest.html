@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Request</title>
+</head>
+<body>
+  <script>
+    const requestUrl = 'https://ipinfo.io/161.185.160.93/geo';
+    // to send data or get request 
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl); // to request or
+    // console.log("HERE");
+    xhr.onreadystatechange = function(){
+      console.log(xhr.readyState);
+      if(xhr.readyState===4){
+        const data = JSON.parse(this.responseText);
+        console.log(data.city);
+      }
+    };
+    xhr.send(); // to call open 
+
+  </script>
+</body>
+</html>

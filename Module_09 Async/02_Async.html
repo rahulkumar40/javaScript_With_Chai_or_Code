@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      background-color: black;
+      color: aqua;
+    }
+    button{
+      height: 60px;
+      width:120px;
+      border: 2px solid red;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Chai Aur Javascript</h1>
+
+  <button id="start">Start</button>
+
+  <button id="stop">Stop</button>
+  <script>
+
+    const start = document.querySelector('#start');
+    const stop = document.querySelector('#stop');
+    let intervalId;
+    const k = start.addEventListener('click', ()=>{
+      intervalId = setInterval(()=>{
+        const rating = Math.round((Math.random())*10 + 1);
+        console.log("Hitesh sir", rating );
+      }, 1000)
+      return k;
+    })
+
+    stop.addEventListener('click', ()=>{
+      clearInterval(intervalId)
+      alert("Done ! ")
+    })
+
+
+
+
+
+
+
+
+    // const sayDate = ()=>{
+    //   console.log("Hitesh sir ", Date.now());
+    // };
+
+    // // const intervalId = setInterval(sayDate ,1000);
+    // const startButton = ()=>{
+    //   setInterval(sayDate ,1000);
+    // }
+    // start.addEventListener('click', ()=>{
+    //   startButton();
+    // })
+
+    // stop.addEventListener('click', ()=>{
+    //   clearInterval(k);
+    //   alert("Interval Stoped ! ")
+    // })
+
+
+  </script>
+</body>
+</html>

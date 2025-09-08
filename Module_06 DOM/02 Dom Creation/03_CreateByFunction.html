@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chai Aur Code</title>
+</head>
+<style>
+  #chil-bro{
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+  }
+  #chil-bro:hover{
+    background-color: #1fd5d5;
+    color: blue;
+    overflow: hidden;
+  }
+  
+  /* min-width : 
+        min-width: 800px at this point all work flow will ok after that what you want to do .
+   */
+  /* @media (min-width: 800px) {
+    body{
+    margin: 5px;
+    border-radius: 10px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+  } */
+</style>
+<body style="background-color: black; color: white;">
+  <script>  
+    let div ;
+    const createDiv = (message)=>{
+      div = document.createElement('div');
+      div.id = 'chil-bro';
+      // div.style.padding = "10px" 
+      // div.style.margin = "5px"
+      div.setAttribute('title', 'function-msg');
+      const addText = document.createTextNode(`${message} 01`);
+      div.appendChild(addText)
+      document.body.appendChild(div)
+    }
+    createDiv("hi i am Rahul kumar sah ");
+    createDiv("Hitesh sir");
+
+
+    const createNode = (message)=>{
+      div = document.createElement('div');
+      div.setAttribute('title', 'function-msg');
+      div.id = 'chil-bro';
+      div.className = "Gods-Plan-Bab"
+      // div.style.backgroundColor = 'red';
+      // div.style.padding = "10px" 
+      // div.style.margin = "5px"
+      div.innerText = message;
+      document.body.appendChild(div)
+    }
+    createNode("hi");
+    createNode("Hitesh sir is a greate teacher in today tach industory of YT")
+
+  </script>
+</body>
+</html>

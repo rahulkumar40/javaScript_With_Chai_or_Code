@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Event </title>
+  <style>
+    p{
+        color: white;
+        margin-bottom: 2rem;
+    }
+    li{
+       list-style: none;
+       margin: 0;
+       padding: 0;
+    }
+    .highlighted{
+        background-color: aqua;
+        color: orangered;
+        font-size: 4rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  </style>
+</head>
+<body style="background-color: black; color: white;">
+  <h2>Amazing Images</h2>
+  <div>
+    <ul id="images">
+      <li >
+        <p>Image 1 </p>
+        <img width="200px" src="./img/IMG_20230308_120452.jpg" alt="photshop" id="img1" >
+      </li>
+     <li>
+        <p>Image 2 </p>
+          <img width="200px" src="./img/IMG_20230308_121629.jpg" alt="photshop" id="img2" >
+      </li>
+       <li><p>Image 3 </p> <img width="200px" src="./img/IMG_20230308_121904.jpg" alt="photshop" id="img3" >
+      </li>
+        <li><p>Image 4 </p><img width="200px" src="./img/IMG_20230308_131019.jpg" alt="photshop" id="img4" >
+      </li>
+       <li> <p>Image 5 </p> <img width="200px" src="./img/IMG_20230308_131117.jpg" alt="photshop" id="img5" >
+      </li>
+      <li><a id="google" href="#">Goolge</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // // all 
+
+    const allList = document.querySelectorAll('li')
+    console.log(allList);
+    allList.forEach(e=>{
+        console.log(e.textContent);
+        e.classList.add('d');
+    })
+
+
+    // 1st way to add event inline html onclick()=>{clg("hi me hu")}
+    // //    // attachEvent() --> 
+    // // JQuery - on
+    
+
+    // 2nd way to add event 
+    // onclick --> can apply seperatly to every element individualy or by its array
+    // but it is not scalable or take every some more thing chat gpt give me content regarding it
+    
+    document.getElementById('img1').onclick = function(){
+        alert("This is first image bab")
+    }
+
+    // 3rd way to add event 
+    // addEventListener 
+    // browser event -->mouse press (onclick) mouse hattay, rakha , key press kiya ,
+
+    // propogation ability provided by eventlisterner
+    document.getElementById('img2').
+    addEventListener("click", (e)=>{
+        console.log(e)
+      console.log('click inside the ul')
+    })
+
+
+    // other way 
+    // attachEvent()
+
+    // // third parameter --> false / true --> default false 
+
+    document.getElementById('images').addEventListener("click", (e)=>{
+        console.log("Image clicked oter")
+    },true) // true show the capturing top to bottom 
+
+    // document.getElementById('images').addEventListener("click", (e)=>{
+    //     console.log("Image clicked oter")
+    // }) // true show the capturing top to bottom 
+
+    document.getElementById('img3').addEventListener("click", (e)=>{
+        console.log("Image clicked inside")
+        e.stopPropagation();
+    },false)
+
+    // document.getElementById('google').addEventListener("click", (e)=>{
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   console.log("google clicked");
+    // },true)
+
+    // type of event , timestamp, defaultPrevented, 
+    // //target, toElement , sourceElement , currentTarget
+
+    // clientX, y, screenX, y, 
+    // altKey, crtKey, shifKey, key code
+    
+
+    // event propogation
+    // --> event bubling --> defauld behaviours 
+    // --> evernt capturing
+
+
+
+    // document.querySelector('.images').addEventListener('click', function(e){
+    //   if(e.target.tagName === 'IMG'){
+    //   console.log(e.target.parentNode);
+    //   console.log(e.target.id)
+    //   let removeIt = e.target.parentNode
+    //   removeIt.remove()
+    //   }
+    //   // removeIt.parentNode.removeChild(removeIt)
+    // })
+  </script>
+</body>
+</html>

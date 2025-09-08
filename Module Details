@@ -1,0 +1,46 @@
+Module_01 
+  --> 01_Variable
+  --> 02_Data type and type conversion (2, 3, 6)
+  --> 05_operation
+  --> 07_Memory
+  --> 08_String
+  --> 09_NumsAndMath
+  --> 10_Math
+  --> 11_Date
+
+  
+Module_02
+  --> 01_Array
+  --> 02_Object
+
+Module_03
+  --> 01_Function
+  --> 02_Scope
+  --> 03_Arrow function 
+  --> 04_IIFE(imidiate call)
+
+Module_04
+  Control Flow 
+  --> if 
+  --> else 
+  --> else if
+  --> switch
+  --> truthe_false
+
+Module_05
+  --> 01_loop
+  --> 02_while loop 
+  --> map() Object
+  --> map() Array function 
+  --> forof() loop 
+  --> forin() loop
+  --> forEach() loop
+  --> filter() function of Array
+  --> reduce() function of array
+
+  Module_06
+  --> 01_DOM Basic selector or .....
+  --> 02_DOM on 
+ 
+
+

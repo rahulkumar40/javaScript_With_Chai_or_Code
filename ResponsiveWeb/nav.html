@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Section </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body, HTML{
+            height: 100%;
+            width: 100%;
+            font-family: sans-serif;
+        }
+        /* nav main icon section  */
+        .nav-section{
+            max-width: 100%;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 5px 13px rgb(154, 27, 27);
+            margin-bottom: 10px;
+            /* border:4px solid black; */
+        }
+        .logo{
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+        .logo h1{
+            text-shadow: 3px 3px 6px rgb(209, 50, 50);
+        }
+        .logo p{
+            font-size: 2rem;
+        }
+        /* search section  */
+        .search-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-box  input{
+            background-color: transparent;
+            height: 2rem;
+            width: 10rem;
+            border-radius: 6px;
+            border: 1px solid rgb(115, 116, 118);
+            text-align: center;
+        }
+        .search-box button{
+            font-size: 1.3rem;
+            background-color: transparent;
+            border: 1px solid rgb(115, 116, 118);
+        }
+        /* website page link */
+        .page-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            font-size: 1.3rem;
+            max-width: 300px;
+            margin-right: 30px;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-size: 1.3rem;
+        }
+        .link-a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            transition: all 0.2s ease-in;
+        }
+        .link-a:hover{
+            background-color: rgb(149, 200, 200);
+            border-radius: 4px;
+        }
+
+        /* dark color  */
+        .change-color{
+            display: flex;
+            max-width: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .change-color img{
+            height: 30px;
+            width: 30px;
+            border-radius: 10px;
+            /* box-shadow: 2px 4px 5px rgb(61, 59, 59); */
+        }
+        /* login logout section  */
+        .log-in-out{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+            max-width: 100px;
+            list-style-type: none;
+            /* text-transform:capitalize; */
+        }
+        .cover{
+            background-color: rgb(240, 240, 246);
+            height: 100vh;
+            width: 100vw;;
+        }
+        /* @media (min-width:700px){
+            .page-link{
+                display: flex;
+                flex-direction: row;
+            }
+        } */
+        @media screen and (max-width: 785px) {
+            .page-link {
+                background-color: lightblue;
+                display: none;
+            }
+}
+    </style>
+</head>
+<body>
+    <nav class="nav-section">
+        <div class="logo">
+            <h1>R</h1>
+            <p>ahul</p>
+        </div>
+        <div class="search-box">
+            <input type="text">
+            <button>Search</button>
+        </div>
+        <div class="page-link">
+                <li class="link-a"><a href="#">Home</a></li>
+                <li class="link-a"><a href="#">About</a></li>
+                <li class="link-a"><a href="#">Galery</a></li>
+                <li class="link-a"><a href="#">Content</a></li>
+                <li class="link-a"><a href="#">Offer</a></li>
+        </div>
+        <div class="change-color">
+            <img src="466300.png" alt="icon-img">
+        </div>
+        <div class="log-in-out">
+            <li class="link-a"><a href="#">Login</a></li>
+            <li class="link-a"><a href="#">Signup</a></li>
+        </div>
+
+    </nav>
+    <div class="cover">
+        Hi
+    </div>
+    <script>
+        const dark = document.querySelector('.change-color');
+        const body = document.querySelector('.cover');
+
+        dark.addEventListener('click', function(){
+            body.style.backgroundColor = 'black';
+            // dark.style.backgroundColor = 'black';
+            nav.style.backgroundColor = 'white'
+        } )
+
+        dark.addEventListener('dblclick', function(){
+            body.style.backgroundColor = 'white';
+            dark.style.color = 'black';
+        } )
+        
+        
+    </script>
+</body>
+</html>

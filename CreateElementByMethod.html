@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      background-color: black;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+    }
+    .head{
+      background-color: aqua;
+      height: 200px;
+      width: 50%;
+    }
+    #myId{
+      background-image: url(IMG_20230308_125118.jpg);
+      background-size: 90% 90%;
+      background-repeat: no-repeat;
+      color: rgb(27, 21, 21);
+      height: 100%;
+      width: 100%;
+      margin: 10px;
+      font-weight: 600;
+      text-align: center;
+
+    }#myId text:hover{
+      text-transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const body = document.querySelector('body');
+    const div = document.createElement('div');
+    div.className = 'head';
+    div.id = 'div-one';
+    div.setAttribute('title', 'my-heading' );
+    console.log(div);
+    div.innerText="Hiiiiiiii" ;
+    div.style.color = 'hii';
+    document.body.appendChild(div);
+    
+    const print = (message)=>{
+      const div1 = document.createElement('div');
+      div1.id = 'myId'
+      div1.innerText=`${message}`;
+      document.body.appendChild(div1);
+    }
+    print("kya hal hai ");
+    print("hii this side rahul kumar");
+    print("here is me and my friend celibrating holi ")
+    print("Jai shree Ram");
+  </script>
+</body>
+
+</html>
