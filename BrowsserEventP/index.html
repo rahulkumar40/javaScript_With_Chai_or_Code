@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div>
+            <p id="pra">Rahul Kumar</p>
+            <button id="btn">Click Me</button>
+        </div>
+
+        <div id="parent">
+            <ul id="liParent">
+                <li>item <span>first </span> 1</li>
+                <li>item <span>first </span> 2</li>
+                <li>item <span>first </span>  3</li>
+                <li>item <span>first </span> 4</li>
+            </ul>
+        </div>
+    </section>
+    <script>
+
+        // optimal way to write code 
+        function changePra(){
+            if(k)
+            pra.textContent = "Ravi Kumar"
+        else pra.textContent="rahul kumar"
+        }
+
+        let pra = document.getElementById('pra')
+        let btn = document.getElementById('btn');
+        btn.addEventListener("click", changePra)
+
+        btn.removeEventListener('click', changePra);
+
+        let li = document.querySelectorAll('li')
+        console.log(li)
+        let liParent = document.getElementById('liParent')
+        console.log(liParent)
+        let i =0;
+        function changeItem(e){
+            // console.log(e.target.textContent)
+            let ans = e.target.textContent  + " me chang ho gya hu " + i++;
+            console.log(ans)
+            e.target.textContent = ans;
+
+        }
+        liParent.addEventListener("click", changeItem);
+
+        // let span = document.querySelectorAll('span');
+        // span.addEventListener('click', changeItem);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+Got it 🚀 Let’s turn all that heavy REST API theory into beautiful, structured notes that are:
+
+Easy to understand
+
+Simple to revise before interviews
+
+Ready to explain in an interview with clarity
+
+📘 REST API — Quick Notes for Interview
+🔹 What is an API?
+
+API = Application Programming Interface
+
+Defines rules for communication between software systems.
+
+Example: A timesheet app exposes an API → You send employee details → It returns hours worked.
+
+Think of API as a bridge between client and server resources.
+
+🔹 What is REST?
+
+REST = Representational State Transfer
+
+It’s an architectural style (not a protocol).
+
+Defines how APIs should behave to enable reliable communication over the web.
+
+REST APIs commonly use HTTP as the protocol.
+
+👉 REST (design style) ≠ HTTP (communication protocol), but they work together.
+
+🔹 REST API (RESTful API)
+
+An API built using REST principles.
+
+Communication between client and server using HTTP methods.
+
+Data format: Mostly JSON (but can be XML, HTML, images, etc.).
+
+🔹 Clients & Resources
+
+Clients → Who makes requests (browser, mobile app, software).
+
+Resources → The data client wants (text, image, video, JSON, etc.).
+
+Server → Provides the resource and manages security/authentication.
+
+🔹 CRUD Operations with HTTP
+CRUD Action	HTTP Method	Example
+Create	POST	Add a new user
+Read	GET	Fetch user details
+Update	PUT / PATCH	Update user info
+Delete	DELETE	Remove user
+🔹 REST Principles (Key Interview Point ✅)
+
+Uniform Interface
+
+Use a standard format for communication.
+
+Constraints:
+
+Resources identified by URI
+
+Self-descriptive messages (metadata included)
+
+Hyperlinks for discovering related resources (HATEOAS)
+
+Statelessness
+
+Each request is independent (server doesn’t remember previous requests).
+
+Clients send all necessary info with every request.
+
+Layered System
+
+Requests/responses may pass through multiple servers (layers) like security, load balancers, etc.
+
+Client doesn’t know about intermediate layers.
+
+Cacheability
+
+Responses can be cached for performance.
+
+Example: Common images, headers, etc. are stored instead of re-downloading every time.
+
+Code on Demand (Optional)
+
+Server can send executable code (e.g., JavaScript for form validation).
+
+🔹 Why REST APIs?
+
+Scalable → Works well with large systems.
+
+Portable → Easy to use across platforms.
+
+Flexible → Can send data in JSON, XML, etc.
+
+Widely used → Industry standard for web services.
+
+🔹 Real-World Example
+
+A banking app → needs to fetch user balance (GET), update profile (PUT), delete old payees (DELETE), or add transactions (POST).
+
+REST API provides these operations securely over HTTP.
+
+🎯 Interview Cheat-Sheet
+
+Q: What is REST API in simple terms?
+👉 REST API is a way for two systems (client & server) to talk over the web using HTTP methods like GET, POST, PUT, DELETE. It’s stateless, scalable, and usually returns JSON data.
+
+Q: Difference between REST and HTTP?
+👉 REST is an architectural style (rules for API design). HTTP is the protocol (rules for communication). REST APIs often use HTTP, but they are not the same.
+
+Q: What are the principles of REST?
+👉 Uniform interface, Statelessness, Layered system, Cacheability, Code on demand (optional).
+
+Q: Example of CRUD operations with REST API?
+👉 GET → Fetch users, POST → Add user, PUT → Update user, DELETE → Remove user.
+
+⚡ With these notes, you can answer REST API questions confidently in interviews — short, structured, and with real-world examples.
+
+Would you like me to also make a small diagram/visual flow (Client → HTTP Request → Server → JSON Response) that you can put in your notes for quick recall?
